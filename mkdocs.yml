@@ -1,0 +1,56 @@
+site_name: Hunting
+site_url: https://tylerobara.github.io/hunting
+repo_url: https://github.com/tylerobara/hunting
+theme:
+  name: material
+  features:
+    - navigation.top
+    - toc.integrate
+    - toc.follow
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.instant
+    - navigation.indexes
+    - navigation.footer
+    - content.code.copy
+    - content.code.prettify
+    - content.code.annotate
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      primary: orange
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - hunt-plan.md
+  - hunt-execution.md
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.keys
+  - pymdownx.details
+  - admonition
